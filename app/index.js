@@ -1,10 +1,5 @@
-import { Text, View } from "react-native";
+import Login from "./login";
 
 export default function Index() {
-  return (
-    <View>
-      <Text>Welcome to the financial notes app!</Text>
-      <Text>This is the main screen.</Text>
-    </View>
-  );
+  return <Login />;
 }

@@ -1,10 +1,10 @@
 import { Stack } from "expo-router";
-import { Text, View } from "react-native";
+import { View } from "react-native";
 
 export default function Layout() {
   return (
-    <View>
-      <Stack></Stack>
+    <View className="flex-1">
+      <Stack />
     </View>
   );
 }
