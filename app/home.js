@@ -1,10 +1,10 @@
-import { Text, View } from "react-native";
+import { View } from "react-native";
+import Checks from "../components/Checks";
 
 export default function Home() {
   return (
-    <View>
-      <Text>Welcome to the financial notes app!</Text>
-      <Text>This is the home screen.</Text>
+    <View className="w-full min-h-full">
+      <Checks />
     </View>
   );
 }

@@ -3,7 +3,7 @@ import { Pressable, Text, TextInput, View } from "react-native";
 
 export default function Login() {
   return (
-    <View className="W-full h-full justify-center items-center">
+    <View className="W-full h-full justify-center items-center bg-fn-1">
       <Stack.Screen
         options={{
           headerShown: false,
