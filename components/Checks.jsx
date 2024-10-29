@@ -9,6 +9,7 @@ import {
 import Bill from "./Bill";
 import * as SQLite from "expo-sqlite";
 import { useState, useEffect } from "react";
+import { PlusIcon } from "./Icons";
 
 export default function Checks() {
   const [modalVisible, setModalVisible] = useState(false);
@@ -25,7 +26,7 @@ export default function Checks() {
   }
 
   return (
-    <ScrollView showsVerticalScrollIndicator={false} className="">
+    <ScrollView showsVerticalScrollIndicator={false}>
       <Modal
         animationType="fade"
         transparent={true}
@@ -33,28 +34,35 @@ export default function Checks() {
         onRequestClose={() => setModalVisible(false)}
       >
         <View className="flex-1 justify-center items-center bg-black/50">
-          <View className="w-80 p-5 bg-white rounded-lg shadow-lg items-center">
+          <View className="w-5/6 p-5 bg-white rounded-lg shadow-lg items-center">
             <Text className="text-xl font-semibold mb-4">Nueva cuenta</Text>
 
             <TextInput
-              className="w-full mt-4 px-4 py-2 text-lg rounded-lg"
+              className="w-full mt-4 px-4 py-2 text-lg rounded-lg border-2"
               placeholder="Nombre de la cuenta"
-              value={""}
             />
 
-            <Pressable
-              className="mt-2 px-4 py-2 bg-green-500 rounded"
-              onPress={() => setModalVisible(false)}
-            >
-              <Text className="text-white text-lg">Guardar</Text>
-            </Pressable>
+            <TextInput
+              className="w-full mt-4 px-4 py-2 text-lg rounded-lg border-2"
+              placeholder="Cantidad Inicial"
+              keyboardType="numeric"
+            />
 
-            <Pressable
-              className="mt-2 px-4 py-2 bg-red-500 rounded"
-              onPress={() => setModalVisible(false)}
-            >
-              <Text className="text-white text-lg">Cerrar</Text>
-            </Pressable>
+            <View className="w-full flex-row justify-around mt-2">
+              <Pressable
+                className="mt-2 px-4 py-2 bg-green-500 rounded"
+                onPress={() => setModalVisible(false)}
+              >
+                <Text className="text-white text-lg">Crear</Text>
+              </Pressable>
+
+              <Pressable
+                className="mt-2 px-4 py-2 bg-red-500 rounded"
+                onPress={() => setModalVisible(false)}
+              >
+                <Text className="text-white text-lg">Cerrar</Text>
+              </Pressable>
+            </View>
           </View>
         </View>
       </Modal>
@@ -62,12 +70,14 @@ export default function Checks() {
       <View className="w-full justify-center items-center pb-5">
         <Bill />
 
-        <View className="w-11/12 h-20 flex-row rounded-2xl mt-6 bg-fn-1">
+        <View className="w-11/12 h-20 flex-row rounded-2xl mt-6 bg-orange-400">
           <Pressable
             className="w-full justify-center items-center"
             onPress={() => setModalVisible(true)}
           >
-            <Text className="text-5xl">+</Text>
+            <Text className="">
+              <PlusIcon />
+            </Text>
           </Pressable>
         </View>
       </View>

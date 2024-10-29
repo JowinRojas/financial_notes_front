@@ -3,7 +3,7 @@ import { DetailMenuIcon } from "./Icons";
 
 export default function Bill() {
   return (
-    <View className="w-11/12 h-20 flex-row rounded-2xl mt-6 bg-fn-1">
+    <View className="w-11/12 h-20 flex-row rounded-2xl mt-6 bg-orange-400">
       <Pressable className="w-10/12 justify-around">
         <Text className="text-2xl pl-2 ">NOMBRE</Text>
         <Text className="text-3xl pl-2">$ 1'156.234.67</Text>

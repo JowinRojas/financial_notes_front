@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "fn-1": "#46b6ff",
+        "fn-1": "#000",
       },
     },
   },
